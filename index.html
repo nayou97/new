@@ -1,15 +1,16 @@
 
+
 <html>
     <head>
   
-    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
     <!-- webapp list new -->
-    <link rel="stylesheet" href="../webapplist.css" /> <!-- design 파트 레이아웃 -->
+    <link rel="stylesheet" href="webapplist.css" /> <!-- design 파트 레이아웃 -->
     <script src="webapplist.js"></script>
 
     <!-- design -->
-    <link rel="stylesheet" href="../css/untitled.css" /> <!-- design 파트 레이아웃 -->
-    <script src="../js/untitled.js"></script> <!-- Design 파트 기능(페이징, 확대기능) -->
+    <link rel="stylesheet" href="css/untitled.css" /> <!-- design 파트 레이아웃 -->
+    <script src="js/untitled.js"></script> <!-- Design 파트 기능(페이징, 확대기능) -->
 
 
 
@@ -205,7 +206,7 @@
 
 
             <div class="introduce"> <!-- About TEXT-->
-                <h3>안녕하세요. 신입 웹 퍼블리셔 <i>오나혜</i> 입니다.</h3><br><br> <!-- 이름에 형광펜 효과 적용 -->
+                <h3>안녕하세요. 신입 웹 퍼블리셔 <i style="background-color:#00FEFE">오나혜</hi> 입니다.</h3><br><br> <!-- 이름에 형광펜 효과 적용 -->
                 
                 <p>
                     상상하던 것들을 코드로 실현되는 과정에 매력을 느껴<br>
@@ -234,15 +235,28 @@
             <!-- skills -->
             <div>
                 <h3>Skills</h3>
-                <ul>
-                    <li><img src="images/ps.png"></li>
-                    <li><img src="images/ai.png"></li>
-                    <li><img src="images/html.png"></li>
-                    <li><img src="images/css.png"></li>
-                    <li><img src="images/js.png"></li>
+                <ul class="flex-container">
+                    <li class="flex-item"><img src="images/ps.png"></li>
+                    <li class="flex-item"><img src="images/ai.png"></li>
+                    <li class="flex-item"><img src="images/html.png"></li>
+                    <li class="flex-item"><img src="images/css.png"></li>
+                    <li class="flex-item"><img src="images/js.png"></li>
                 </ul>
 
-            </div>
+            </div>  
+
+
+            <style type="text/css">
+                 .flex-container{
+            display: flex;
+        }
+        .flex-item{
+            width: 100px;
+            height: 100px;
+            margin: 10px; 
+        }
+
+            </style>
 
 
           </div> 
@@ -372,10 +386,10 @@
 
 
 
-<div id ="design" class="page">
+<div id ="design" class="page" style="background-color: white;">
 
  
-      <h2>Design</h2>
+      <h2> </h2>
  
 
       <div class="container" style="height: 80%">
