@@ -1,0 +1,504 @@
+
+<html>
+    <head>
+  
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <!-- webapp list new -->
+    <link rel="stylesheet" href="webapplist.css" /> <!-- design 파트 레이아웃 -->
+    <script src="webapplist.js"></script>
+
+    <!-- design -->
+    <link rel="stylesheet" href="css/untitled.css" /> <!-- design 파트 레이아웃 -->
+    <script src="js/untitled.js"></script> <!-- Design 파트 기능(페이징, 확대기능) -->
+
+
+
+
+
+
+<!-- 현제 포폴 전체 셋팅 -->
+        <style>
+            html,body {
+                margin: 0; 
+                padding: 0;
+            }
+            #wrap {
+                width: 100vw;
+                height: 100vh;
+                overflow: auto;
+                scroll-snap-type: y mandatory;
+            }
+            #wrap .page {
+                scroll-snap-align: center;
+                display: inline-block;
+                width: 100%;
+                height: 100%; /* 전체화면에 비치는 크기 *//* 전체화면 레이아웃에서 Padding 넣었기 때문에 컨텐츠들이 너무 아래로 내려갔던것 ;; */
+                font-size: 20px; 
+                text-align: center;
+                box-sizing: border-box;
+                color: #fff;
+            }
+
+
+            #wrap .footer {
+                scroll-snap-align: center;
+                display: inline-block;
+                width: 100%;
+                height: 50vh;
+                padding: 100px;
+                font-size: 20px;
+                text-align: center;
+                box-sizing: border-box;
+                color: #fff;
+            }
+
+
+
+            #aside {
+              position: sticky; /* 스크롤바 설정이다. */
+              top: 250px; /* 화면상 책갈피가 어느높이인지 */
+              padding-left: 80px;
+              font-size: 10px;
+            }
+            /* 스크롤따라 움직임 - https://cat-minzzi.tistory.com/43 */ 
+
+            a:hover {color:seagreen; text-decoration: none;}
+            /* https://collocationvoca.tistory.com/48 
+            화면상 모든 텍스트는 커서를 갖다대면 색상이 변한다 */
+
+ 
+ 
+        </style>
+
+
+<link rel="stylesheet" href="myweb.css" /> <!-- 전체  -->
+ 
+
+
+
+
+ 
+
+</head>
+
+
+
+
+
+
+<body>
+    <div id="wrap"><!-- 전체내용 -->
+
+
+
+
+    <!-- 책갈피 https://curryyou.tistory.com/163 -->
+<div id ="aside">
+    <h2><a href = "#first" style="cursor: url(images/rainbow-drag.png), auto;">- first</a></h2>
+    <h2><a href = "#about" style="cursor: url(images/rainbow-drag.png), auto;">- about</a></h2>
+    <h2><a href = "#portpolio" style="cursor: url(images/rainbow-drag.png), auto;">- portpolio</a></h2>
+    <h2><a href = "#design" style="cursor: url(images/rainbow-drag.png), auto;">- design</a></h2>
+    <h2><a href = "#contact" style="cursor: url(images/rainbow-drag.png), auto;">- contact</a></h2>
+</div>
+
+
+
+
+            <div id="first" class="page" style="background:black;">
+
+                        <div class="wrapper"> 
+                            <div class="typing-demo"><a class="neon">Hello~ This is my website.</a></div>
+                         </div>
+                    
+<!-- 메인 텍스트 설정 -->
+<style type="text/css">
+    .wrapper {
+  height: 100vh;
+  /*This part is important for centering*/
+  display: grid;
+  place-items: center;
+}
+
+.typing-demo {
+  width: 22ch;
+  animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: monospace;
+  font-size: 2em;
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+    
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+}
+
+
+
+
+.neon {
+  color: #fff;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff0080, 0 0 30px #ff0080, 0 0 40px #ff0080, 0 0 55px #ff0080, 0 0 75px #ff0080;
+  font-size: 18px;
+}
+
+
+</style>
+
+
+</div><!-- page black end -->
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- profile page -->
+<div id="about" class="page" style="background:blueviolet;">  
+      
+
+
+
+<!-- profile -->
+<div class="about section">
+
+    <div class="about-wrap">
+
+        <!-- 슬라이더 프로필 -->
+        <div class="left" data-aos="fade-right" data-aos-delay="200" data-aos-duration="1000"> 
+
+
+            <div class="about1">
+              <div class="about_img">
+                <h2>Profile</h2>
+                <img src="images/profile.jpg" alt="프로필사진">
+                <div class="wave-one"></div>
+                <div class="wave-two"></div>
+                <div class="wave-three"></div>
+              </div>
+ 
+
+            </div> 
+
+ 
+
+        </div>
+
+
+
+        <div class="right" data-aos="fade-left" data-aos-delay="200" data-aos-duration="1500">
+            
+
+
+            <div class="introduce"> <!-- About TEXT-->
+                <h3>안녕하세요. 신입 웹 퍼블리셔 <i>오나혜</i> 입니다.</h3><br><br> <!-- 이름에 형광펜 효과 적용 -->
+                
+                <p>
+                    상상하던 것들을 코드로 실현되는 과정에 매력을 느껴<br>
+                    웹디자이너 &amp; 웹퍼블리셔로 살아가려 합니다~<br>
+                    사용성을 고려한 매력적인 사이트를 구현하기 위해 노력하고 있습니다.
+                </p>
+                 
+            </div>
+            
+
+
+            <div class="experiences">
+                 
+              <ul>
+                <li>EDUCATION</li>
+                <li>2016.02 일신여자상업고등학교 졸업 <br> 2020.02 배화여자대학교 졸업</li>
+              </ul>
+              <ul>
+                <li>CERTIFICATION</li>
+                <li>GTQ 포토샵 1급 <br> 컴퓨터활용능력 2</li>
+              </ul> 
+
+            </div> 
+
+
+            <!-- skills -->
+            <div>
+                <h3>Skills</h3>
+                <ul>
+                    <li><img src="imgaes/ai.png"></li>
+                    <li><img src="imgaes/ai.png"></li>
+                    <li><img src="imgaes/ai.png"></li>
+                    <li><img src="imgaes/ai.png"></li>
+                    <li><img src="imgaes/ai.png"></li>
+                </ul>
+
+            </div>
+
+
+          </div> 
+
+
+    </div> <!-- <div class="about-wrap"> END -->
+
+</div><!-- profile -->
+
+
+
+
+
+</div>
+<!-- profile page -->
+
+ 
+
+
+
+ 
+
+
+            <div id ="portpolio" class="page" style="background:brown;">
+
+ 
+  <div class="cntWrap">
+        <div class="content">
+            <div class="article">
+
+
+                <div class="imgView">
+                    <div class="imgGroup">
+                        <div class="image i1"></div>
+                        <div class="image i2"></div>
+                        <div class="image i3"></div>
+                        <div class="image i4"></div>
+                        <div class="image i5"></div>
+                    </div>
+                </div>
+
+
+                <div class="txtView">
+                    <div class="txtGroup">
+
+                        <div class="texts">
+                            <h2>대청한의원</h2>
+                            <p>병원 웹사이트입니다.<br>
+                            동네 병원을 리뉴얼</p>
+                            <div class="btn"><a href="https://nayou97.github.io/han_hospital/" style="cursor: url(images/rainbow-drag.png), auto;">BUTTON</a></div>
+                        </div>
+
+                        <div class="texts">
+                            <h2>쥬얼리 쇼핑몰</h2>
+                            <p>쥬얼리 쇼핑몰 웹사이트</p>
+                            <div class="btn"><a href="https://nayou97.github.io/jewelry/" style="cursor: url(images/rainbow-drag.png), auto;">BUTTON</a></div>
+                        </div>
+
+                        <div class="texts">
+                            <h2>어린이보험 가입 폼</h2>
+                            <p>청년층을 위한 보험 모음</p>
+                            <div class="btn"><a href="https://nayou97.github.io/policy/" style="cursor: url(images/rainbow-drag.png), auto;">BUTTON</a></div>
+                        </div>
+
+                        <div class="texts">
+                            <h2>우리모두 쉐어하우스</h2>
+                            <p>청년층 주거공간 확보를 위해 도움을 주는 웹</p>
+                            <div class="btn"><a href="https://nayou97.github.io/place/" style="cursor: url(images/rainbow-drag.png), auto;">BUTTON</a></div>
+                        </div>
+
+                        <div class="texts">
+                            <h2>모델 에이전시</h2>
+                            <p>유치원 어린이 여러분을 보호하는 가족분들께 안심되는 서비스.</p>
+                            <div class="btn"><a href="https://nayou97.github.io/han_hospital/" style="cursor: url(images/rainbow-drag.png), auto;">BUTTON</a></div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="menu">
+                    <ul class="paging"><!-- 페이징 -->
+                        <li class="show"></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <div class="btns"><!-- 버튼모음 -->
+                        <i style="cursor: url(images/rainbow-drag.png), auto;">ㅁ</i>
+                        <i style="cursor: url(images/rainbow-drag.png), auto;"><=</i>
+                        <i style="cursor: url(images/rainbow-drag.png), auto;">=></i>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+
+
+
+
+
+
+<!-- 사진 확대 -->
+<script type="text/javascript">
+    lightbox.option({
+    resizeDuration: 200,
+    wrapAround: true,
+    disableScrolling: false,
+    fitImagesInViewport:false
+})
+</script>
+ 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js"></script>
+
+<!-- 사진 확대 -->
+
+
+
+
+
+<div id ="design" class="page">
+
+ 
+      <h2>Design</h2>
+ 
+
+      <div class="container" style="height: 80%">
+        <ul class="clearfix">
+
+
+
+          <li>
+            <h3 class="sr-only">웹디자인</h3>
+            <ol class="gallery web clearfix">
+                <li><a href="images/sns/sns2.png" data-title="열심히 한 작업!!" data-lightbox="example-set"><img src="images/sns/sns2.png" alt="" style="cursor: url(images/rainbow-drag.png), auto;"></a></li>
+                <li><a href="images/sns/sns3.png" data-title="열심히 한 작업!!" data-lightbox="example-set"><img src="images/sns/sns3.png" alt="" style="cursor: url(images/rainbow-drag.png), auto;"></a></li>
+                <li><a href="images/sns/sns4.png" data-title="열심히 한 작업!!" data-lightbox="example-set"><img src="images/sns/sns4.png" alt="" style="cursor: url(images/rainbow-drag.png), auto;"></a></li>
+                <li><a href="images/sns/sns5.png" data-title="열심히 한 작업!!" data-lightbox="example-set"><img src="images/sns/sns5.png" alt="" style="cursor: url(images/rainbow-drag.png), auto;"></a></li>
+            </ol>
+          </li>
+
+
+
+          <li>
+            <h3 class="sr-only">졸업 디자인전</h3>
+            <ol class="gallery major clearfix">
+                <li><a href="images/sns/sns2.png" data-title="열심히 한 작업!!" data-lightbox="example-set"><img src="images/sns/sns2.png" alt="" style="cursor: url(images/rainbow-drag.png), auto;"></a></li>
+                <li><a href="images/sns/sns3.png" data-title="열심히 한 작업!!" data-lightbox="example-set"><img src="images/sns/sns3.png" alt="" style="cursor: url(images/rainbow-drag.png), auto;"></a></li>
+                <li><a href="images/sns/sns4.png" data-title="열심히 한 작업!!" data-lightbox="example-set"><img src="images/sns/sns4.png" alt="" style="cursor: url(images/rainbow-drag.png), auto;"></a></li>
+                <li><a href="images/sns/sns5.png" data-title="열심히 한 작업!!" data-lightbox="example-set"><img src="images/sns/sns5.png" alt="" style="cursor: url(images/rainbow-drag.png), auto;"></a></li>
+            </ol>
+          </li>
+
+
+
+          <li>
+            <h3 class="sr-only">그래픽 작업물</h3>
+            <ol class="gallery graphic clearfix">
+                <li><a href="images/sns/sns2.png" data-title="열심히 한 작업!!" data-lightbox="example-set"><img src="images/sns/sns2.png" alt="" style="cursor: url(images/rainbow-drag.png), auto;"></a></li>
+                <li><a href="images/sns/sns3.png" data-title="열심히 한 작업!!" data-lightbox="example-set"><img src="images/sns/sns3.png" alt="" style="cursor: url(images/rainbow-drag.png), auto;"></a></li>
+                <li><a href="images/sns/sns4.png" data-title="열심히 한 작업!!" data-lightbox="example-set"><img src="images/sns/sns4.png" alt="" style="cursor: url(images/rainbow-drag.png), auto;"></a></li>
+                <li><a href="images/sns/sns5.png" data-title="열심히 한 작업!!" data-lightbox="example-set"><img src="images/sns/sns5.png" alt="" style="cursor: url(images/rainbow-drag.png), auto;"></a></li>
+                <li><a href="images/sns/sns6.png" data-title="열심히 한 작업!!" data-lightbox="example-set"><img src="images/sns/sns6.png" alt="" style="cursor: url(images/rainbow-drag.png), auto;"></a></li>
+            </ol>
+          </li>
+
+
+        </ul>
+      </div>
+
+
+      <button class="prev" style="cursor: url(images/rainbow-drag.png), auto;">이전</button>
+      <button class="next" style="cursor: url(images/rainbow-drag.png), auto;">다음</button>
+
+ 
+
+
+
+</div>
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+            <div id ="contact" class="footer" style="background:gray;">
+
+
+
+
+<!-- contact -->
+<div class="contact section">
+    <div class="contact-wrap">
+        <h1>Contact</h1>
+        <!-- div class="circle"></div> -->
+        <br>
+        <h5 class="mail">nayou2811@gmail.com</h5>
+        <br>
+        <p>감사합니다!</p>
+        <div class="copy">
+            <span>Copyright 2022. Web-designer. <br>All rights reserved.</span>
+            <span>본 사이트는 상업적 목적이 아닌 개인 포트폴리오로 제작되었습니다.</span>
+        </div>
+
+
+    </div>
+</div>    
+ 
+
+            </div>
+
+
+
+<!-- TOp 버튼 -->
+<div style="position: fixed; bottom: 5px; right: 5px;">
+<a href="#first">
+<img src="top.png" title="위로 가기" style="height: 50px; margin:30px; cursor: url(images/rainbow-drag.png), auto;"></a>
+</div>
+
+
+
+
+
+ 
+
+
+
+</div>
+
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

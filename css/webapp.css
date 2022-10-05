@@ -1,0 +1,67 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,500,700&display=swap');
+.my-div {
+  width : 200px;
+  height : 200px;
+  background-color : blue;
+  cursor : pointer;
+}
+/* DIv 클래스명 my-div이고, 여기에 손올리면모양바뀜 */
+
+/* 전체 설정 */
+html{cursor: url(../images/rainbow.png), auto}
+body{font-family:'Noto Sans KR',sans-serif; color:#2b2b2b; font-size:18px;}
+#wrap{width:100%; min-width:1200px;}
+::selection{background-color:#bbdcfb;}
+
+
+/* section - portfolio + popup gallery*/
+#portfolio>.portfolio_bg{display:none; position:fixed; left:0; top:0; z-index:300; width:100%; height:100%; background-color:rgba(0,0,0,0.5);}
+#portfolio>.portfolio_bg>.portfolio_img{position:fixed; left:50%; top:50%; z-index:310; margin:-500px 0 0 -450px; width:900px; height:800px; overflow-y:scroll;}
+#portfolio>.portfolio_bg>.portfolio_img>.viewClose{display:block; height:4742px; text-indent:-9999px; background-color:#fff;}
+
+/* section - portfolio */
+#portfolio{width:1200px; height:960px; margin:0 auto;}
+#portfolio>h2{margin-bottom:20px; padding-top:200px; font-size:70px; font-weight:500; color:#425a73; letter-spacing:1px; text-align:center;}
+#portfolio>.container2>.mnu{width:946px; margin:0 auto 20px;}
+#portfolio>.container2>.mnu>li{float:left; margin-left:20px; font-size:20px;}
+#portfolio>.container2>.mnu>li:first-child{margin-left:0;}
+#portfolio>.container2>.mnu>li:first-child:after{content:'';}
+#portfolio>.container2>.mnu>li:after{content:'|'; display:block; margin:-25px 0 0 -10px; font-size:12px; color:#ccc;}
+#portfolio>.container2>.mnu>li>a{display:block; padding:0 10px; height:40px; line-height:40px; transition:all 0.4s;}
+#portfolio>.container2>.mnu>li:hover>a,#portfolio>.container2>.mnu>li>a:focus,#portfolio>.container2>.mnu>li.on>a{color:#425a73; font-weight:700; font-size:19px; background-color:rgba(158,213,246,0.5); border-radius:5px;}
+
+
+
+#portfolio>.container2.view{position:relative; width:1200px; height:540px;}
+#portfolio>.container2>.view>li{position:absolute; left:0; top:0; width:1040px; height:380px; padding:20px;}
+#portfolio>.container2>.view>li:not(:first-child){display:none;}
+#portfolio>.container2>.view>li>h3{margin-bottom:20px; font-size:30px;}
+#portfolio>.container2>.view>li>h3>span{font-size:22px;}
+#portfolio>.container2>.view>li>p{margin-bottom:10px; font-size:16px; line-height:1.8;}
+
+
+
+#portfolio>.container2>.view>li>.view_img{position:absolute; right:80px; top:80px; width:480px; height:384px; text-indent:-9999px; background-image:url(../images/1212-001.png);}
+#portfolio>.container2>.view>li:nth-child(2)>.view_img{background-image:url(../images/2.png);}
+#portfolio>.container2>.view>li:nth-child(3)>.view_img{background-image:url(../images/3.png);}
+#portfolio>.container2>.view>li:nth-child(4)>.view_img{background-image:url(../images/4.png);}
+#portfolio>.container2>.view>li:nth-child(5)>.view_img{background-image:url(../images/5.png);}
+#portfolio>.container2>.view>li:nth-child(6)>.view_img{background-image:url(../images/6.png);}
+#portfolio>.container2>.view>li:nth-child(7)>.view_img{background-image:url(../images/7.png);}
+
+
+
+#portfolio>.container2>.view>li>a{float:left; display:block; width:140px; height:40px; margin:100px 10px 0 0; line-height:40px; text-align:center;
+  font-size:16px; font-size:50; color:#425a73; background-color:#fff; border:1px solid #425a73; border-radius:5px; transition:all 0.4s;}
+
+#portfolio>.container2>.view>li>a:hover,#portfolio>.container2>.view>li>a:focus{color:#fff; background-color:#425a73;}
+ 
+
+
+
+
+
+
+
+
